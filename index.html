@@ -7,6 +7,16 @@
 
 	<title>今天就能帶回家的 Java coroutine</title>
 
+	<!-- TypeKit WebFonts.
+	<script src="https://use.typekit.net/kre0bwk.js"></script>
+	<script>
+		try {
+			Typekit.load({
+				async: true
+			});
+		} catch (e) {}
+	</script> -->
+
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/jcconf.css">
 
@@ -700,6 +710,27 @@ private &lt;R&gt; void resume(ResultMessage&lt;R&gt; result, Class&lt;R&gt; type
 				</ul>
 			</section>
 
+			<section data-background-image="img/bottom.png" data-background-position="bottom"
+			 data-background-size="contain" data-background-repeat="no-repeat" data-width="1024px"
+			 data-height="768px">
+				<h3>其他設定</h3>
+
+				<ul>
+					<li class="fragment">
+						如果你的 Fiber 裡有耗時的 blocking 工作：<br>
+						<pre><code>
+							-Dco.paralleluniverse.fibers.detectRunawayFibers=[true|false]
+						</code></pre>
+					</li>
+					<li class="fragment">
+						如果你的程式有無法 instrument 的呼叫：<br>
+						<pre><code>
+							-Dco.paralleluniverse.fibers.verifyInstrumentation=[true|false]
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+
 			<section>
 				<section data-background-image="img/bottom.png" data-background-position="bottom"
 				 data-background-size="contain" data-background-repeat="no-repeat" data-width="1024px"
@@ -715,7 +746,7 @@ private &lt;R&gt; void resume(ResultMessage&lt;R&gt; result, Class&lt;R&gt; type
 				<h3>最後，希望各位不吝指教</h3>
 				<div class="fragment">
 					<img src="img/github.png" style="float: left" width="190px">
-					<h4 style="float: right" width="70%">cchuang1024/jcconf2018-java-coroutine</h4>
+					<h4 style="float: right" width="70%">cchuang0425/take-coroutine-home-<br>today</h4>
 				</div>
 			</section>
 
@@ -725,7 +756,7 @@ private &lt;R&gt; void resume(ResultMessage&lt;R&gt; result, Class&lt;R&gt; type
 				<h3>本場次原始碼</h3>
 				<div class="fragment">
 					<img src="img/github.png" style="float: left" width="190px">
-					<h4 style="float: right" width="60%">cchuang1024/primality-fiber</h4>
+					<h4 style="float: right" width="60%">cchuang0425/java-concurrency-lab</h4>
 				</div>
 			</section>
 
